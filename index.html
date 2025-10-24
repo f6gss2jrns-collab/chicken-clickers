@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chicken Clicker 🐔</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: sans-serif;
+        background: #fff5d7;
+      }
+      img {
+        width: 200px;
+        cursor: pointer;
+        transition: transform 0.1s;
+      }
+      img:active {
+        transform: scale(0.95);
+      }
+      h1 {
+        color: #d46b08;
+      }
+      #count {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🐔 Chicken Clicker 🥚</h1>
+    <p>Clicks: <span id="count">0</span></p>
+    <img
+      id="chicken"
+      src="https://cdn.pixabay.com/photo/2017/01/31/18/13/chicken-2028594_1280.png"
+      alt="Chicken"
+    />
+    <script>
+      let count = 0;
+      const chicken = document.getElementById("chicken");
+      const counter = document.getElementById("count");
+      chicken.addEventListener("click", () => {
+        count++;
+        counter.textContent = count;
+      });
+    </script>
+  </body>
+</html>
+
